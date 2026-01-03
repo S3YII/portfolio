@@ -20,23 +20,24 @@ toggle.onclick = () => {
     toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
 };
 
-/* Hamburger Menu */
+/* HAMBURGER MENU */
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.onclick = () => {
+hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-};
+});
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
   });
 });
 
-/* Theme Toggle */
-const toggle = document.getElementById("themeToggle");
-toggle.onclick = () => {
+/* THEME TOGGLE */
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
-  toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-};
+  themeToggle.textContent =
+    document.body.classList.contains("light") ? "☀️" : "🌙";
+});
