@@ -13,15 +13,27 @@
     <div class="spinner"></div>
 </div>
 
-<!-- DARK MODE TOGGLE -->
-<button id="themeToggle">🌙</button>
+<!-- NAVIGATION BAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Samuel</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle">🌙</button>
+    </div>
+</nav>
 
-<header class="hero">
+<!-- HERO SECTION -->
+<header id="home" class="hero">
     <h1>Hi, I'm <span>Samuel</span></h1>
     <p class="typing"></p>
     <a href="#projects" class="btn">View My Work</a>
 </header>
 
+<!-- PROJECTS SECTION -->
 <section id="projects">
     <h2>Projects</h2>
 
@@ -42,9 +54,9 @@
     </div>
 </section>
 
+<!-- CONTACT SECTION -->
 <section id="contact">
     <h2>Contact Me</h2>
-
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
@@ -53,6 +65,7 @@
     </form>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Samuel. All rights reserved.</p>
 </footer>
