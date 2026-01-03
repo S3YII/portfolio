@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- DARK MODE TOGGLE -->
+<button id="themeToggle">🌙</button>
+
 <header class="hero">
     <h1>Hi, I'm <span>Samuel</span></h1>
     <p class="typing"></p>
@@ -16,15 +24,38 @@
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="project-card">Project One</div>
-    <div class="project-card">Project Two</div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="Project 1">
+            <h3>Portfolio Website</h3>
+            <p>Responsive portfolio built with HTML, CSS & JavaScript.</p>
+            <a href="#" target="_blank">Live Demo</a>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project2.jpg" alt="Project 2">
+            <h3>Stopwatch App</h3>
+            <p>JavaScript stopwatch with milliseconds and UI effects.</p>
+            <a href="#" target="_blank">Live Demo</a>
+        </div>
+    </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">LinkedIn</a>
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
+
+<footer>
+    <p>© 2026 Samuel. All rights reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
