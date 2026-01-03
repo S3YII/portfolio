@@ -15,17 +15,23 @@
 
 <!-- Navbar -->
 <nav class="navbar">
-    <div class="container nav-content">
-        <h2 class="logo">Samuel</h2>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle">🌙</button>
-    </div>
-</nav>
+  <div class="container nav-content">
+    <div class="logo">Samuel</div>
 
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="cv.pdf" class="cv-btn" download>Download CV</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+    
 <!-- Hero -->
 <section id="home" class="hero">
     <div class="container">
