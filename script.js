@@ -1,27 +1,22 @@
-/* LOADING SCREEN */
+// Loader
 window.addEventListener("load", () => {
     document.getElementById("loader").style.display = "none";
 });
 
-/* TYPING EFFECT */
-const text = "Upcoming Web Developer | HTML | CSS | JavaScript";
-let index = 0;
+// Typing effect
+const text = "Frontend Developer | HTML • CSS • JavaScript";
+let i = 0;
 const typing = document.querySelector(".typing");
 
-function typeEffect() {
-    typing.textContent = text.slice(0, index);
-    index++;
-    if (index <= text.length) {
-        setTimeout(typeEffect, 100);
-    }
-}
-typeEffect();
+(function type() {
+    typing.textContent = text.slice(0, i++);
+    if (i <= text.length) setTimeout(type, 80);
+})();
 
-/* DARK / LIGHT MODE */
+// Dark / Light Mode
 const toggle = document.getElementById("themeToggle");
-
-toggle.addEventListener("click", () => {
+toggle.onclick = () => {
     document.body.classList.toggle("light");
-    toggle.textContent =
-        document.body.classList.contains("light") ? "☀️" : "🌙";
-});
+    toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+};
+
