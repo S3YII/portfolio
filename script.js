@@ -3,15 +3,18 @@ window.addEventListener("load", () => {
     document.getElementById("loader").style.display = "none";
 });
 
-// Typing effect
-const text = "Frontend Developer | HTML • CSS • JavaScript";
-let i = 0;
-const typing = document.querySelector(".typing");
+/* TYPING EFFECT */
+const typingText = "Frontend Developer • HTML • CSS • JavaScript";
+let index = 0;
+const typingElement = document.querySelector(".typing");
 
-(function type() {
-    typing.textContent = text.slice(0, i++);
-    if (i <= text.length) setTimeout(type, 80);
-})();
+function typeEffect() {
+  typingElement.textContent = typingText.slice(0, index++);
+  if (index <= typingText.length) {
+    setTimeout(typeEffect, 80);
+  }
+}
+typeEffect();
 
 // Dark / Light Mode
 const toggle = document.getElementById("themeToggle");
