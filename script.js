@@ -44,3 +44,19 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent =
     document.body.classList.contains("light") ? "☀️" : "🌙";
 });
+
+/* SCROLL ANIMATIONS */
+const reveals = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.2 });
+
+reveals.forEach(section => {
+  section.classList.add("reveal");
+  observer.observe(section);
+});
