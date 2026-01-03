@@ -20,3 +20,17 @@ toggle.onclick = () => {
     toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
 };
 
+/* Hamburger Menu */
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.onclick = () => {
+  navLinks.classList.toggle("active");
+};
+
+/* Optional: Close menu when link is clicked */
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
